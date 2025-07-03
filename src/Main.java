@@ -80,7 +80,7 @@ public class Main {
     /**
      * 4. Напишите метод, вычисляющий факториал числа с помощью цикла for
      */
-    public static int getFactorial(int num){
+    public static int getFactorial(int num) {
         int result = 1;
         for (int i = 2; i <= num; i++) {
             result *= i;
@@ -93,7 +93,7 @@ public class Main {
      *    Для прямоугольника (принимает длину и ширину).
      */
     public static double calculateArea(double radius) {
-        return Math.PI * Math.pow(radius,2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public static double calculateArea(double length, double width) {
@@ -107,7 +107,7 @@ public class Main {
         for (int it : nums) {
            sum += it;
         }
-        return (sum/nums.length);
+        return sum / nums.length;
     }
 
     /**
@@ -115,7 +115,6 @@ public class Main {
      *    и возвращает длину гипотенузы (используйте теорему Пифагора)
      */
     public static double calculateHypotenuse(double leg1, double leg2) {
-        return Math.sqrt(Math.pow(leg1,2) + Math.pow(leg2,2));
+        return Math.sqrt(Math.pow(leg1, 2) + Math.pow(leg2, 2));
     }
-
 }

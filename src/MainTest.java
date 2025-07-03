@@ -25,11 +25,13 @@ class MainTest {
     public void getMax() {
         int arrayMax[] = {-2, -3, 0};
         Assertions.assertEquals(0,Main.getMax(arrayMax));
+        Assertions.assertEquals(5,Main.getMax(5,2));
     }
 
     @Test
     public void getFactorial() {
         Assertions.assertEquals((1 * 2 * 3 * 4 * 5), Main.getFactorial(5));
+        Assertions.assertNull(Main.getFactorial(-5));
     }
 
     @Test
@@ -46,10 +48,14 @@ class MainTest {
     public void getAverage() {
         double average  = (20 + 30 + 30) * 1.0 / 3;
         Assertions.assertEquals(average, Main.getAverage(20, 30, 30));
+        Assertions.assertEquals((double) (2 + 5 + 3) / 3, Main.getAverage(2, 5, 3));
     }
 
     @Test
     public void calculateHypotenuse() {
         Assertions.assertEquals(Math.sqrt((6 * 6) + (8 * 8)), Main.calculateHypotenuse(6, 8));
+        double d = 2.0; // катет 1
+        double e = 4.0; // катет 2
+        Assertions.assertEquals(Math.pow( Math.pow(d,2) + Math.pow(e,2),0.5), Main.calculateHypotenuse(d,e));
     }
 }
